@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MCU Film News</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: #141414;
+    color: #b8b8b8;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 13.5px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .bar {
+    border-bottom: 1px solid #252525;
+    padding: 12px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .bar-title {
+    font-size: 12.5px;
+    font-weight: 500;
+    color: #fff;
+    letter-spacing: 0.01em;
+  }
+
+  .bar-links {
+    display: flex;
+    gap: 16px;
+    font-size: 12px;
+    color: #444;
+  }
+
+  .bar-links a { color: #555; text-decoration: none; }
+  .bar-links a:hover { color: #999; }
+
+  .wrap {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 48px 24px 80px;
+  }
+
+  h1 {
+    font-size: 26px;
+    font-weight: 600;
+    color: #f0f0f0;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+
+  .sub {
+    font-size: 12px;
+    font-weight: 300;
+    color: #666;
+    text-align: center;
+    margin-bottom: 32px;
+  }
+
+  .pills {
+    display: flex;
+    gap: 7px;
+    flex-wrap: wrap;
+    margin-bottom: 36px;
+  }
+
+  .section { margin-bottom: 48px; }
+
+  .section-label {
+    font-size: 11px;
+    font-weight: 500;
+    color: #777;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  .tbox {
+    border: 1px solid #212121;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  table { width: 100%; border-collapse: collapse; }
+
+  thead tr { border-bottom: 1px solid #1e1e1e; }
+
+  th {
+    font-size: 10.5px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #2e2e2e;
+    padding: 9px 16px;
+    text-align: left;
+    background: #121212;
+  }
+
+  td {
+    padding: 11px 16px;
+    border-bottom: 1px solid #1b1b1b;
+    vertical-align: middle;
+  }
+
+  tr:last-child td { border-bottom: none; }
+  tbody tr:hover { background: #171717; }
+
+  .name {
+    font-weight: 400;
+    color: #d0d0d0;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+  }
+
+  .icon { font-size: 13px; width: 18px; text-align: center; flex-shrink: 0; }
+
+  .src {
+    font-size: 11.5px;
+    color: #555;
+    font-weight: 300;
+  }
+
+  .src a {
+    color: #5a7fa8;
+    text-decoration: none;
+    border-bottom: 1px solid #2a3d52;
+  }
+  .src a:hover { color: #88aacc; }
+
+  .yr { color: #383838; margin-left: 4px; }
+
+  /* badges */
+  .b {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+  }
+
+  .dot {
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .r  { background: #1e1500; color: #c8960f; border: 1px solid #2a1e00; }
+  .r  .dot { background: #c8960f; }
+
+  .c  { background: #061410; color: #20a050; border: 1px solid #0c2018; }
+  .c  .dot { background: #20a050; }
+
+  .h  { background: #180a0a; color: #c04040; border: 1px solid #280e0e; }
+  .h  .dot { background: #c04040; }
+
+  .cs { background: #0a0a1e; color: #6a7fd4; border: 1px solid #141430; }
+  .cs .dot { background: #6a7fd4; }
+
+  footer {
+    border-top: 1px solid #1e1e1e;
+    padding-top: 20px;
+    font-size: 11.5px;
+    font-weight: 300;
+    color: #444;
+    text-align: center;
+  }
+
+  footer a { color: #2a2a2a; text-decoration: underline; }
+  footer a:hover { color: #666; }
+
+  @media (max-width: 600px) {
+    .bar, .wrap { padding-left: 16px; padding-right: 16px; }
+    td, th { padding: 9px 10px; }
+    .tbox { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    table { min-width: 420px; }
+    h1 { font-size: 20px; }
+    .name { font-size: 12px; }
+    .src { font-size: 10.5px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="bar">
+  <span class="bar-title">MCU Film News</span>
+  <div class="bar-links">
+    <a href="https://twitter.com/MCUFilmNews" target="_blank">Twitter (X) — @MCUFilmNews</a>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <h1>MCU Film News</h1>
+  <p class="sub">Community tracker · Not official · Updated Feb 24, 2026</p>
+
+  <div class="pills">
+    <span class="b r"><span class="dot"></span>In Development</span>
+    <span class="b c"><span class="dot"></span>In Production</span>
+    <span class="b cs"><span class="dot"></span>Coming Soon</span>
+    <span class="b h"><span class="dot"></span>On Hold</span>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Marvel Studios</div>
+    <div class="tbox">
+      <table>
+        <thead><tr><th>Project</th><th>Source</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td><div class="name">Avengers: Doomsday</div></td><td class="src">Marvel Studios</td><td><span class="b c"><span class="dot"></span>In Production</span></td></tr>
+          <tr><td><div class="name">Avengers: Secret Wars</div></td><td class="src">Marvel Studios</td><td><span class="b r"><span class="dot"></span>In Development</span></td></tr>
+          <tr><td><div class="name">X-Men</div></td><td class="src">Marvel Studios</td><td><span class="b r"><span class="dot"></span>In Development</span></td></tr>
+          <tr><td><div class="name">Terror, Inc.</div></td><td class="src">Marvel Studios</td><td><span class="b h"><span class="dot"></span>On Hold</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Marvel Television</div>
+    <div class="tbox">
+      <table>
+        <thead><tr><th>Project</th><th>Source</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td><div class="name">The Punisher</div></td><td class="src">Marvel Studios</td><td><span class="b c"><span class="dot"></span>In Production</span></td></tr>
+          <tr><td><div class="name">Champions</div></td><td class="src"><a href="https://x.com/MCUFilmNews/status/1860399165496570201" target="_blank">Nexus Point News</a></td><td><span class="b r"><span class="dot"></span>In Development</span></td></tr>
+          <tr><td><div class="name">Jessica Jones</div></td><td class="src">Brad Winderbaum</td><td><span class="b r"><span class="dot"></span>In Development</span></td></tr>
+          <tr><td><div class="name">Nova</div></td><td class="src">Marvel Studios</td><td><span class="b h"><span class="dot"></span>On Hold</span></td></tr>
+          <tr><td><div class="name">Daredevil: Born Again S2</div></td><td class="src">Marvel Studios</td><td><span class="b cs"><span class="dot"></span>Coming Soon</span></td></tr>
+          <tr><td><div class="name">VisionQuest</div></td><td class="src">Marvel Studios</td><td><span class="b cs"><span class="dot"></span>Coming Soon</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Marvel Animation</div>
+    <div class="tbox">
+      <table>
+        <thead><tr><th>Project</th><th>Source</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td><div class="name">X-Men '97 S2</div></td><td class="src">Marvel Studios</td><td><span class="b cs"><span class="dot"></span>Coming Soon</span></td></tr>
+          <tr><td><div class="name">Your Friendly Neighborhood Spider-Man S2</div></td><td class="src">Marvel Studios</td><td><span class="b cs"><span class="dot"></span>Coming Soon</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Sony Pictures</div>
+    <div class="tbox">
+      <table>
+        <thead><tr><th>Project</th><th>Source</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td><div class="name">Spider-Man: Miles Morales</div></td><td class="src">Variety</td><td><span class="b c"><span class="dot"></span>In Production</span></td></tr>
+          <tr><td><div class="name">Spider-Man: Brand New Day</div></td><td class="src">Sony Pictures</td><td><span class="b cs"><span class="dot"></span>Coming Soon</span></td></tr>
+          <tr><td><div class="name">Spider-Gwen</div></td><td class="src">THR</td><td><span class="b r"><span class="dot"></span>In Development</span></td></tr>
+          <tr><td><div class="name">Spider-Punk</div></td><td class="src">THR</td><td><span class="b r"><span class="dot"></span>In Development</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <footer>
+    <span>Not affiliated with Marvel Studios or Sony Pictures</span>
+  </footer>
+
+</div>
+</body>
+</html>
