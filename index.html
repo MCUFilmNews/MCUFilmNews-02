@@ -72,6 +72,7 @@
   }
   .tagline a { color: #555; text-decoration: none; border-bottom: none; }
   .tagline a:hover { color: #888; }
+  .tagline:last-of-type { margin-bottom: 40px; }
 
   .sub {
     font-size: 12px;
@@ -203,13 +204,18 @@
   footer a:hover { color: #666; }
 
   @media (max-width: 600px) {
-    .bar, .wrap { padding-left: 16px; padding-right: 16px; }
+    .wrap { padding-left: 16px; padding-right: 16px; }
     td, th { padding: 9px 10px; }
     .tbox { overflow-x: auto; -webkit-overflow-scrolling: touch; }
-    table { min-width: 420px; }
-    h1 { font-size: 20px; }
+    table { min-width: unset; width: 100%; table-layout: auto; }
+    td:nth-child(1) { width: auto; }
+    td:nth-child(2) { width: auto; }
+    td:nth-child(3) { width: auto; }
+    td:nth-child(4), th:nth-child(4) { display: none; }
+    h1 { font-size: 36px; }
     .name { font-size: 12px; }
     .src { font-size: 10.5px; }
+    .b { font-size: 10px; padding: 2px 6px; }
   }
 </style>
 </head>
