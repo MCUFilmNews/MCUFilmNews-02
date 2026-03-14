@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MCU Film News</title>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&family=Barlow+Condensed:wght@700&display=swap" rel="stylesheet">
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -51,14 +51,27 @@
   }
 
   h1 {
-    font-size: 26px;
-    font-weight: 600;
+    font-size: 64px;
+    font-weight: 400;
+    font-family: 'Barlow Condensed', sans-serif;
     color: #f0f0f0;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
     text-align: center;
-    margin-bottom: 8px;
+    margin-bottom: 2px;
+    line-height: 1;
+    margin-top: 8px;
   }
+  .tagline {
+    text-align: center;
+    font-size: 13px;
+    color: #555;
+    letter-spacing: 0.04em;
+    margin-bottom: 4px;
+    margin-top: 10px;
+  }
+  .tagline a { color: #555; text-decoration: none; border-bottom: none; }
+  .tagline a:hover { color: #888; }
 
   .sub {
     font-size: 12px;
@@ -92,7 +105,11 @@
     overflow: hidden;
   }
 
-  table { width: 100%; border-collapse: collapse; }
+  table { width: 100%; border-collapse: collapse; table-layout: fixed; }
+  td:nth-child(1) { width: 40%; }
+  td:nth-child(2) { width: 25%; }
+  td:nth-child(3) { width: 18%; }
+  td:nth-child(4) { width: 17%; }
 
   thead tr { border-bottom: 1px solid #1e1e1e; }
 
@@ -198,35 +215,26 @@
 </head>
 <body>
 
-<div class="bar">
-  <span class="bar-title">MCU Film News</span>
-  <div class="bar-links">
-    <a href="https://twitter.com/MCUFilmNews" target="_blank">Twitter (X) — @MCUFilmNews</a>
-  </div>
-</div>
-
 <div class="wrap">
 
   <h1>MCU Film News</h1>
-  <p class="sub">Community tracker · Not official · Updated Feb 24, 2026</p>
+  <p class="tagline">Tracking every Marvel project in development</p>
+  <p class="tagline"><a href="https://twitter.com/MCUFilmNews" target="_blank">Twitter (X) — MCUFilmNews</a></p>
 
-  <div class="pills">
-    <span class="b r"><span class="dot"></span>In Development</span>
-    <span class="b c"><span class="dot"></span>In Production</span>
-    <span class="b cs"><span class="dot"></span>Coming Soon</span>
-    <span class="b h"><span class="dot"></span>On Hold</span>
-  </div>
+
+
 
   <div class="section">
     <div class="section-label">Marvel Studios</div>
     <div class="tbox">
       <table>
-        <thead><tr><th>Project</th><th>Source</th><th>Status</th></tr></thead>
+        <thead><tr><th>Project</th><th>Source</th><th>Status</th><th>Release Date</th></tr></thead>
         <tbody>
-          <tr><td><div class="name">Avengers: Doomsday</div></td><td class="src">Marvel Studios</td><td><span class="b c"><span class="dot"></span>In Production</span></td></tr>
-          <tr><td><div class="name">Avengers: Secret Wars</div></td><td class="src">Marvel Studios</td><td><span class="b r"><span class="dot"></span>In Development</span></td></tr>
-          <tr><td><div class="name">X-Men</div></td><td class="src">Marvel Studios</td><td><span class="b r"><span class="dot"></span>In Development</span></td></tr>
-          <tr><td><div class="name">Terror, Inc.</div></td><td class="src">Marvel Studios</td><td><span class="b h"><span class="dot"></span>On Hold</span></td></tr>
+          <tr><td><div class="name">Avengers: Doomsday</div></td><td class="src"><a href="https://www.marvel.com/movies/avengers-doomsday" target="_blank">Marvel Studios</a></td><td><span class="b c"><span class="dot"></span>In Production<td class="src">Dec 18, 2026</td></tr>
+          <tr><td><div class="name">Avengers: Secret Wars</div></td><td class="src"><a href="https://www.marvel.com/movies/avengers-secret-wars" target="_blank">Marvel Studios</a></td><td><span class="b r"><span class="dot"></span>In Development<td class="src">Dec 17, 2027</td></tr>
+          <tr><td><div class="name">X-Men</div></td><td class="src"><a href="https://x.com/MCUFilmNews/status/1935721881254207830?s=20" target="_blank">Variety</a></td><td><span class="b r"><span class="dot"></span>In Development<td class="src">TBA</td></tr>
+          <tr><td><div class="name">Midnight Sons</div></td><td class="src"><a href="https://x.com/MCUFilmNews/status/1800546522788188466?s=20" target="_blank">Nexus Point News</a></td><td><span class="b r"><span class="dot"></span>In Development<td class="src">TBA</td></tr>
+          <tr><td><div class="name">Terror, Inc.</div></td><td class="src"><a href="https://x.com/MCUFilmNews/status/1892640658994631144?s=20" target="_blank">Deadline</a></td><td><span class="b h"><span class="dot"></span>On Hold<td class="src">TBA</td></tr>
         </tbody>
       </table>
     </div>
@@ -236,14 +244,16 @@
     <div class="section-label">Marvel Television</div>
     <div class="tbox">
       <table>
-        <thead><tr><th>Project</th><th>Source</th><th>Status</th></tr></thead>
+        <thead><tr><th>Project</th><th>Source</th><th>Status</th><th>Release Date</th></tr></thead>
         <tbody>
-          <tr><td><div class="name">The Punisher</div></td><td class="src">Marvel Studios</td><td><span class="b c"><span class="dot"></span>In Production</span></td></tr>
-          <tr><td><div class="name">The Champions</div></td><td class="src"><a href="https://x.com/MCUFilmNews/status/1860399165496570201" target="_blank">Nexus Point News</a></td><td><span class="b r"><span class="dot"></span>In Development</span></td></tr>
-          <tr><td><div class="name">Jessica Jones</div></td><td class="src">Brad Winderbaum</td><td><span class="b r"><span class="dot"></span>In Development</span></td></tr>
-          <tr><td><div class="name">Nova</div></td><td class="src">Marvel Studios</td><td><span class="b h"><span class="dot"></span>On Hold</span></td></tr>
-          <tr><td><div class="name">Daredevil: Born Again S2</div></td><td class="src">Marvel Studios</td><td><span class="b cs"><span class="dot"></span>Coming Soon</span></td></tr>
-          <tr><td><div class="name">VisionQuest</div></td><td class="src">Marvel Studios</td><td><span class="b cs"><span class="dot"></span>Coming Soon</span></td></tr>
+          <tr><td><div class="name">The Punisher</div></td><td class="src"><a href="https://x.com/MCUFilmNews/status/2020739156079714624?s=20" target="_blank">Disney+</a></td><td><span class="b c"><span class="dot"></span>In Production<td class="src">2026</td></tr>
+          <tr><td><div class="name">Champions</div></td><td class="src"><a href="https://x.com/MCUFilmNews/status/1860399165496570201" target="_blank">Nexus Point News</a></td><td><span class="b r"><span class="dot"></span>In Development<td class="src">TBA</td></tr>
+          <tr><td><div class="name">Jessica Jones</div></td><td class="src"><a href="https://x.com/MCUFilmNews/status/2008003389037412483?s=20" target="_blank">DanielRPK</a></td><td><span class="b r"><span class="dot"></span>In Development<td class="src">TBA</td></tr>
+          <tr><td><div class="name">Nova</div></td><td class="src"><a href="https://x.com/MCUFilmNews/status/1892640658994631144?s=20" target="_blank">Deadline</a></td><td><span class="b h"><span class="dot"></span>On Hold<td class="src">TBA</td></tr>
+          <tr><td><div class="name">Daredevil: Born Again S2</div></td><td class="src"><a href="https://x.com/MCUFilmNews/status/2029660740014203184?s=20" target="_blank">Disney+</a></td><td><span class="b cs"><span class="dot"></span>Coming Soon<td class="src">Mar 24, 2026</td></tr>
+          <tr><td><div class="name">Strange Academy</div></td><td class="src"><a href="https://x.com/MCUFilmNews/status/1892640658994631144?s=20" target="_blank">Deadline</a></td><td><span class="b h"><span class="dot"></span>On Hold<td class="src">TBA</td></tr>
+          <tr><td><div class="name">Spider-Noir</div></td><td class="src"><a href="https://x.com/MCUFilmNews/status/2021997336130728203?s=20" target="_blank">Prime Video</a></td><td><span class="b cs"><span class="dot"></span>Coming Soon<td class="src">May 27, 2026</td></tr>
+          <tr><td><div class="name">VisionQuest</div></td><td class="src"><a href="https://x.com/MCUFilmNews/status/1977319724498497999?s=20" target="_blank">Disney+</a></td><td><span class="b cs"><span class="dot"></span>Coming Soon<td class="src">Fall 2026</td></tr>
         </tbody>
       </table>
     </div>
@@ -253,10 +263,10 @@
     <div class="section-label">Marvel Animation</div>
     <div class="tbox">
       <table>
-        <thead><tr><th>Project</th><th>Source</th><th>Status</th></tr></thead>
+        <thead><tr><th>Project</th><th>Source</th><th>Status</th><th>Release Date</th></tr></thead>
         <tbody>
-          <tr><td><div class="name">X-Men '97 S2</div></td><td class="src">Marvel Studios</td><td><span class="b cs"><span class="dot"></span>Coming Soon</span></td></tr>
-          <tr><td><div class="name">Your Friendly Neighborhood Spider-Man S2</div></td><td class="src">Marvel Studios</td><td><span class="b cs"><span class="dot"></span>Coming Soon</span></td></tr>
+          <tr><td><div class="name">X-Men '97 S2</div></td><td class="src"><a href="https://x.com/MCUFilmNews/status/1977305922864370058?s=20" target="_blank">Collider</a></td><td><span class="b cs"><span class="dot"></span>Coming Soon<td class="src">Summer 2026</td></tr>
+          <tr><td><div class="name">Your Friendly Neighborhood Spider-Man S2</div></td><td class="src"><a href="https://x.com/MCUFilmNews/status/2021669809617088707?s=20" target="_blank">Disney+</a></td><td><span class="b cs"><span class="dot"></span>Coming Soon<td class="src">Fall 2026</td></tr>
         </tbody>
       </table>
     </div>
@@ -266,12 +276,12 @@
     <div class="section-label">Sony Pictures</div>
     <div class="tbox">
       <table>
-        <thead><tr><th>Project</th><th>Source</th><th>Status</th></tr></thead>
+        <thead><tr><th>Project</th><th>Source</th><th>Status</th><th>Release Date</th></tr></thead>
         <tbody>
-          <tr><td><div class="name">Spider-Man: Miles Morales</div></td><td class="src">Variety</td><td><span class="b c"><span class="dot"></span>In Production</span></td></tr>
-          <tr><td><div class="name">Spider-Man: Brand New Day</div></td><td class="src">Sony Pictures</td><td><span class="b cs"><span class="dot"></span>Coming Soon</span></td></tr>
-          <tr><td><div class="name">Spider-Gwen</div></td><td class="src">THR</td><td><span class="b r"><span class="dot"></span>In Development</span></td></tr>
-          <tr><td><div class="name">Spider-Punk</div></td><td class="src">THR</td><td><span class="b r"><span class="dot"></span>In Development</span></td></tr>
+          <tr><td><div class="name">Spider-Man: Miles Morales</div></td><td class="src"><a href="https://variety.com/2021/film/news/spider-man-miles-morales-movie-confirmed-amy-pascal-1235112602/" target="_blank">Variety</a></td><td><span class="b c"><span class="dot"></span>In Production<td class="src">TBA</td></tr>
+          <tr><td><div class="name">Spider-Man: Brand New Day</div></td><td class="src"><a href="https://spidermanbrandnewday.movie/" target="_blank">Sony Pictures</a></td><td><span class="b cs"><span class="dot"></span>Coming Soon<td class="src">Jul 31, 2026</td></tr>
+          <tr><td><div class="name">Spider-Gwen</div></td><td class="src"><a href="https://x.com/MCUFilmNews/status/2022052641048764672?s=20" target="_blank">THR</a></td><td><span class="b r"><span class="dot"></span>In Development<td class="src">TBA</td></tr>
+          <tr><td><div class="name">Spider-Punk</div></td><td class="src"><a href="https://x.com/MCUFilmNews/status/2022052641048764672?s=20" target="_blank">THR</a></td><td><span class="b r"><span class="dot"></span>In Development<td class="src">TBA</td></tr>
         </tbody>
       </table>
     </div>
