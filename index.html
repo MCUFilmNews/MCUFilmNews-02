@@ -234,6 +234,7 @@
         <tbody>
           <tr><td><div class="name">Avengers: Doomsday</div></td><td class="src"><a href="https://www.marvel.com/movies/avengers-doomsday" target="_blank">Marvel Studios</a></td><td><span class="b c"><span class="dot"></span>In Production<td class="src">Dec 18, 2026</td></tr>
           <tr><td><div class="name">Avengers: Secret Wars</div></td><td class="src"><a href="https://www.marvel.com/movies/avengers-secret-wars" target="_blank">Marvel Studios</a></td><td><span class="b r"><span class="dot"></span>In Development<td class="src">Dec 17, 2027</td></tr>
+          <tr><td><div class="name">Spider-Man: Brand New Day</div></td><td class="src"><a href="https://spidermanbrandnewday.movie/" target="_blank">Sony Pictures</a></td><td><span class="b cs"><span class="dot"></span>Coming Soon</span></td><td class="src">Jul 31, 2026</td></tr>
           <tr><td><div class="name">X-Men</div></td><td class="src"><a href="https://x.com/MCUFilmNews/status/1935721881254207830?s=20" target="_blank">Variety</a></td><td><span class="b r"><span class="dot"></span>In Development<td class="src">TBA</td></tr>
           <tr><td><div class="name">Midnight Sons</div></td><td class="src"><a href="https://x.com/MCUFilmNews/status/1800546522788188466?s=20" target="_blank">Nexus Point News</a></td><td><span class="b r"><span class="dot"></span>In Development<td class="src">TBA</td></tr>
           <tr><td><div class="name">Terror, Inc.</div></td><td class="src"><a href="https://x.com/MCUFilmNews/status/1892640658994631144?s=20" target="_blank">Deadline</a></td><td><span class="b h"><span class="dot"></span>On Hold<td class="src">TBA</td></tr>
@@ -267,7 +268,8 @@
       <table>
         <thead><tr><th>Project</th><th>Source</th><th>Status</th><th>Release Date</th></tr></thead>
         <tbody>
-          <tr><td><div class="name">X-Men '97 S2</div></td><td class="src"><a href="https://x.com/MCUFilmNews/status/1977305922864370058?s=20" target="_blank">Collider</a></td><td><span class="b cs"><span class="dot"></span>Coming Soon<td class="src">Summer 2026</td></tr>
+          <tr><td><div class="name">X-Men '97 Season 2</div></td><td class="src"><a href="https://x.com/MCUFilmNews/status/1977305922864370058?s=20" target="_blank">Collider</a></td><td><span class="b cs"><span class="dot"></span>Coming Soon<td class="src">Summer 2026</td></tr>
+          <tr><td><div class="name">X-Men '97 Season 3</div></td><td class="src"><a href="https://x.com/MCUFilmNews/status/1900915947151745475?s=20" target="_blank">Collider</a></td><td><span class="b c"><span class="dot"></span>In Production</span></td><td class="src">TBA</td></tr>
           <tr><td><div class="name">Your Friendly Neighborhood Spider-Man S2</div></td><td class="src"><a href="https://x.com/MCUFilmNews/status/2021669809617088707?s=20" target="_blank">Disney+</a></td><td><span class="b cs"><span class="dot"></span>Coming Soon<td class="src">Fall 2026</td></tr>
         </tbody>
       </table>
@@ -280,10 +282,10 @@
       <table>
         <thead><tr><th>Project</th><th>Source</th><th>Status</th><th>Release Date</th></tr></thead>
         <tbody>
-          <tr><td><div class="name">Spider-Man: Miles Morales</div></td><td class="src"><a href="https://variety.com/2021/film/news/spider-man-miles-morales-movie-confirmed-amy-pascal-1235112602/" target="_blank">Variety</a></td><td><span class="b r"><span class="dot"></span>In Development</span></td><td class="src">TBA</td></tr>
-          <tr><td><div class="name">Spider-Man: Brand New Day</div></td><td class="src"><a href="https://spidermanbrandnewday.movie/" target="_blank">Sony Pictures</a></td><td><span class="b cs"><span class="dot"></span>Coming Soon<td class="src">Jul 31, 2026</td></tr>
+          <tr><td><div class="name">Spider-Man: Beyond the Spider-Verse</div></td><td class="src"><a href="https://x.com/MCUFilmNews/status/1971002761371320649?s=20" target="_blank">Sony Pictures</a></td><td><span class="b c"><span class="dot"></span>In Production</span></td><td class="src">Jun 4, 2027</td></tr>
           <tr><td><div class="name">Spider-Gwen</div></td><td class="src"><a href="https://x.com/MCUFilmNews/status/2022052641048764672?s=20" target="_blank">THR</a></td><td><span class="b r"><span class="dot"></span>In Development<td class="src">TBA</td></tr>
           <tr><td><div class="name">Spider-Punk</div></td><td class="src"><a href="https://x.com/MCUFilmNews/status/2022052641048764672?s=20" target="_blank">THR</a></td><td><span class="b r"><span class="dot"></span>In Development<td class="src">TBA</td></tr>
+          <tr><td><div class="name">Spider-Man: Miles Morales</div></td><td class="src"><a href="https://variety.com/2021/film/news/spider-man-miles-morales-movie-confirmed-amy-pascal-1235112602/" target="_blank">Variety</a></td><td><span class="b r"><span class="dot"></span>In Development</span></td><td class="src">TBA</td></tr>
         </tbody>
       </table>
     </div>
@@ -294,5 +296,571 @@
   </footer>
 
 </div>
+
+<!-- MODAL -->
+<div id="modal-overlay" onclick="closeModal()">
+  <div id="modal" onclick="event.stopPropagation()">
+    <button id="modal-close" onclick="closeModal()">✕</button>
+    <div id="modal-badge-row"></div>
+    <h2 id="modal-title"></h2>
+    <p id="modal-tagline"></p>
+    <div id="modal-body"></div>
+  </div>
+</div>
+
+<style>
+  #modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.75);
+    z-index: 100;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  #modal-overlay.open { display: flex; }
+  #modal {
+    background: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-radius: 12px;
+    padding: 32px;
+    max-width: 560px;
+    width: 100%;
+    position: relative;
+    max-height: 85vh;
+    overflow-y: auto;
+    animation: slideUp 0.2s ease;
+  }
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  #modal-close {
+    position: absolute;
+    top: 16px; right: 16px;
+    background: none;
+    border: none;
+    color: #555;
+    font-size: 16px;
+    cursor: pointer;
+    line-height: 1;
+  }
+  #modal-close:hover { color: #aaa; }
+  #modal-badge-row { margin-bottom: 12px; }
+  #modal h2 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #f0f0f0;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  #modal-tagline {
+    font-size: 12px;
+    color: #555;
+    margin-bottom: 24px;
+  }
+  .modal-section {
+    margin-bottom: 20px;
+  }
+  .modal-section-title {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #444;
+    margin-bottom: 6px;
+  }
+  .modal-section-value {
+    font-size: 13px;
+    color: #c0c0c0;
+    line-height: 1.7;
+  }
+  .modal-cast { display: flex; flex-direction: column; gap: 6px; }
+  .cast-pill {
+    background: #222;
+    border: 1px solid #2a2a2a;
+    border-radius: 4px;
+    padding: 3px 10px;
+    font-size: 11.5px;
+    color: #aaa;
+  }
+  .cast-pill span { color: #666; font-size: 10.5px; }
+  .clickable-name { cursor: pointer; text-decoration: none; }
+  .clickable-name:hover { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
+</style>
+
+<script>
+const projects = {
+  "Avengers: Doomsday": {
+    status: "In Production",
+    statusClass: "c",
+    release: "Dec 18, 2026",
+    tagline: "Doctor Doom has officially arrived in the MCU. This villain, a master of cutting-edge science and powerful magic, will unleash a cascading crisis across the entire multiverse.",
+    director: "Anthony Russo, Joe Russo",
+    writer: "Stephen McFeely, Michael Waldron",
+    producer: "Kevin Feige",
+    studio: "Marvel Studios / AGBO",
+    cast: [
+      ["Robert Downey Jr.", "Doctor Doom"],
+      ["Pedro Pascal", "Reed Richards / Mr. Fantastic"],
+      ["Chris Hemsworth", "Thor"],
+      ["Vanessa Kirby", "Sue Storm / Invisible Woman"],
+      ["Anthony Mackie", "Sam Wilson / Captain America"],
+      ["Sebastian Stan", "Bucky Barnes / Winter Soldier"],
+      ["Letitia Wright", "Shuri / Black Panther"],
+      ["Paul Rudd", "Scott Lang / Ant-Man"],
+      ["Wyatt Russell", "John Walker / U.S. Agent"],
+      ["Tenoch Huerta Mejía", "Namor"],
+      ["Ebon Moss-Bachrach", "Ben Grimm / Thing"],
+      ["Simu Liu", "Shang-Chi"],
+      ["Florence Pugh", "Yelena Belova"],
+      ["Kelsey Grammer", "Hank McCoy / Beast"],
+      ["Lewis Pullman", "Sentry"],
+      ["Danny Ramirez", "Joaquín Torres / Falcon"],
+      ["Joseph Quinn", "Johnny Storm / Human Torch"],
+      ["David Harbour", "Red Guardian"],
+      ["Winston Duke", "M'Baku"],
+      ["Hannah John-Kamen", "Ghost"],
+      ["Tom Hiddleston", "Loki"],
+      ["Patrick Stewart", "Professor X"],
+      ["Ian McKellen", "Magneto"],
+      ["Alan Cumming", "Nightcrawler"],
+      ["Rebecca Romijn", "Mystique"],
+      ["James Marsden", "Cyclops"],
+      ["Chris Evans", "Steve Rogers"],
+      ["Hayley Atwell", "Peggy Carter"],
+      ["Ryan Reynolds", "Wade Wilson / Deadpool"],
+      ["Hugh Jackman", "Logan / Wolverine"],
+      ["Tobey Maguire", "Peter Parker / Spider-Man"],
+      ["Channing Tatum", "Gambit"],
+    ]
+  },
+  "Avengers: Secret Wars": {
+    status: "In Development",
+    statusClass: "r",
+    release: "Dec 17, 2027",
+    tagline: "The finale of the Multiverse Saga.",
+    director: "Anthony Russo, Joe Russo",
+    writer: "Stephen McFeely, Michael Waldron",
+    producer: "Kevin Feige",
+    studio: "Marvel Studios / AGBO",
+    cast: [
+      ["Robert Downey Jr.", "Doctor Doom"],
+      ["Pedro Pascal", "Reed Richards"],
+      ["Vanessa Kirby", "Sue Storm"],
+      ["Ebon Moss-Bachrach", "Thing"],
+      ["Joseph Quinn", "Johnny Storm"],
+      ["Sebastian Stan", "Bucky Barnes"],
+      ["Letitia Wright", "Black Panther"],
+      ["Simu Liu", "Shang-Chi"],
+      ["Sadie Sink", "Jean Grey"],
+      ["Paul Bettany", "White Vision"],
+    ]
+  },
+  "X-Men": {
+    status: "In Development",
+    statusClass: "r",
+    release: "TBA",
+    tagline: "Marvel Studios' reboot of the X-Men franchise.",
+    director: "Jake Schreier",
+    writer: "Michael Lesslie",
+    producer: "Kevin Feige",
+    studio: "Marvel Studios",
+    cast: [
+      ["Sadie Sink", "Jean Grey"],
+    ]
+  },
+  "Midnight Sons": {
+    status: "In Development",
+    statusClass: "r",
+    release: "TBA",
+    tagline: "Marvel's supernatural team-up project.",
+    director: "TBA",
+    writer: "Michael Green",
+    producer: "TBA",
+    studio: "Marvel Studios",
+    cast: []
+  },
+  "Terror, Inc.": {
+    status: "On Hold",
+    statusClass: "h",
+    release: "TBA",
+    tagline: "",
+    director: "TBA",
+    writer: "TBA",
+    producer: "TBA",
+    studio: "Marvel Studios",
+    cast: []
+  },
+  "The Punisher": {
+    status: "Coming Soon",
+    statusClass: "cs",
+    release: "Summer 2026",
+    tagline: "Frank Castle escapes Wilson Fisk's private prison and faces Ma Gnucci, a ruthless disabled crime boss seeking revenge.",
+    director: "Reinaldo Marcus Green",
+    writer: "Jon Bernthal, Reinaldo Marcus Green",
+    producer: "Brad Winderbaum",
+    studio: "Marvel Television",
+    cast: [
+      ["Jon Bernthal", "Frank Castle / Punisher"],
+      ["Jason R. Moore", "Curtis Hoyle"],
+      ["Roe Rancell", "Dennis"],
+      ["Mila Jaymes", "Charli"],
+    ]
+  },
+  "Champions": {
+    status: "In Development",
+    statusClass: "r",
+    release: "TBA",
+    tagline: "A team of young Marvel heroes including Ms. Marvel, Kate Bishop, Cassie Lang, America Chavez, Ironheart and Wiccan.",
+    director: "TBA",
+    writer: "Rachna Fruchbom",
+    producer: "TBA",
+    studio: "Marvel Television",
+    cast: [
+      ["Iman Vellani", "Kamala Khan / Ms. Marvel"],
+      ["Hailee Steinfeld", "Kate Bishop / Hawkeye"],
+      ["Kathryn Newton", "Cassie Lang / Stature"],
+      ["Xochitl Gomez", "America Chavez"],
+      ["Dominique Thorne", "Riri Williams / Ironheart"],
+      ["Joe Locke", "Billy Maximoff / Wiccan"],
+    ]
+  },
+  "Jessica Jones": {
+    status: "In Development",
+    statusClass: "r",
+    release: "TBA",
+    tagline: "Krysten Ritter set to return as Jessica Jones.",
+    director: "TBA",
+    writer: "TBA",
+    producer: "Brad Winderbaum",
+    studio: "Marvel Television",
+    cast: [
+      ["Krysten Ritter", "Jessica Jones"],
+    ]
+  },
+  "Nova": {
+    status: "On Hold",
+    statusClass: "h",
+    release: "TBA (by 2028 per Feige)",
+    tagline: "A Disney+ series centered on Richard Rider as Nova, described as a blend of Star Trek and Battlestar Galactica.",
+    director: "TBA",
+    writer: "Ed Bernero (Showrunner), originally Sabir Pirzada",
+    producer: "Brad Winderbaum",
+    studio: "Marvel Television",
+    cast: [
+      ["TBA", "Richard Rider / Nova"],
+    ]
+  },
+  "Daredevil: Born Again S2": {
+    status: "Coming Soon",
+    statusClass: "cs",
+    release: "Mar 24, 2026",
+    tagline: "Mayor Wilson Fisk crushes New York City underfoot as he hunts down public enemy number one, the Hell's Kitchen vigilante known as Daredevil. But beneath the horned mask, Matt Murdock will try to fight back from the shadows to tear down the Kingpin's corrupt empire and redeem his home. Resist. Rebel. Rebuild.",
+    director: "Justin Benson & Aaron Moorhead (Ep 1-2), Solvan 'Slick' Naim (Ep 3-4), Angela Barnes (Ep 5-6), Iain B. MacDonald (Ep 7-8)",
+    writer: "Dario Scardapane (Showrunner), Jesse Wigutow, Heather Bellson, Grainne Godfree, Chantelle Wells, Omar Najam",
+    producer: "Kevin Feige, Brad Winderbaum, Charlie Cox, Vincent D'Onofrio",
+    studio: "Marvel Television",
+    cast: [
+      ["Charlie Cox", "Matt Murdock / Daredevil"],
+      ["Vincent D'Onofrio", "Wilson Fisk / Kingpin"],
+      ["Krysten Ritter", "Jessica Jones"],
+      ["Elden Henson", "Foggy Nelson"],
+      ["Deborah Ann Woll", "Karen Page"],
+      ["Wilson Bethel", "Benjamin 'Dex' Poindexter / Bullseye"],
+      ["Margarita Levieva", "Heather Glenn"],
+      ["Genneya Walton", "BB Ulrich"],
+      ["Nikki M. James", "Kirsten McDuffie"],
+      ["Matthew Lillard", "Mr. Charles"],
+      ["Lili Taylor", "Marge McCaffrey"],
+      ["Toby Leonard Moore", "James Wesley"],
+    ]
+  },
+  "Strange Academy": {
+    status: "On Hold",
+    statusClass: "h",
+    release: "TBA",
+    tagline: "Strange Academy is the MCU's school for young sorcerers.",
+    director: "TBA",
+    writer: "TBA",
+    producer: "Brad Winderbaum",
+    studio: "Marvel Television",
+    cast: [
+      ["Benedict Wong", "Wong"],
+      ["Xochitl Gomez", "America Chavez (rumored)"],
+    ]
+  },
+  "Spider-Noir": {
+    status: "Coming Soon",
+    statusClass: "cs",
+    release: "May 27, 2026",
+    tagline: "Ben Reilly, a seasoned and down on his luck private investigator in 1930s New York, is forced to grapple with his past life as the city's one and only superhero. Available in Authentic Black & White and True-Hue Full Color.",
+    director: "Harry Bradbeer (Ep 1-2), Nzingha Stewart",
+    writer: "Oren Uziel & Steve Lightfoot (Co-Showrunners)",
+    producer: "Phil Lord, Christopher Miller, Aditya Sood, Dan Shear, Amy Pascal, Nicolas Cage, Pavlina Hatoupis, Harry Bradbeer",
+    studio: "Sony Pictures Television / MGM+ / Prime Video",
+    cast: [
+      ["Nicolas Cage", "Ben Reilly / The Spider"],
+      ["Lamorne Morris", "Robbie Robertson"],
+      ["Li Jun Li", "Cat Hardy"],
+      ["Karen Rodriguez", "Janet"],
+      ["Abraham Popoola", "—"],
+      ["Jack Huston", "Flint Marko"],
+      ["Brendan Gleeson", "Silvermane"],
+      ["Andrew Lewis Caldwell", "—"],
+      ["Randy Oglesby", "Chief McNamara"],
+      ["Richard Robichaux", "Walters"],
+      ["Joe Massingill", "Electro"],
+      ["Lukas Haas", "—"],
+      ["Cameron Britton", "—"],
+      ["Cary Christopher", "—"],
+      ["Michael Kostroff", "—"],
+      ["Scott MacArthur", "—"],
+      ["Whitney Rice", "—"],
+      ["Amanda Schull", "—"],
+      ["Amy Aquino", "—"],
+      ["Andrew Robinson", "—"],
+      ["Kai Caster", "—"],
+    ]
+  },
+  "VisionQuest": {
+    status: "Coming Soon",
+    statusClass: "cs",
+    release: "Fall 2026",
+    tagline: "White Vision tries to regain his memories and humanity, encountering various AIs from across the MCU — including the villainous Ultron — in a trippy mansion inside his own mind.",
+    director: "Terry Matalas",
+    writer: "Terry Matalas, Chris Monfette, Michael A. Taylor, Cindy Appel, Matt Okumura",
+    producer: "Brad Winderbaum",
+    studio: "Marvel Television",
+    cast: [
+      ["Paul Bettany", "White Vision"],
+      ["James Spader", "Ultron"],
+      ["Todd Stashwick", "Paladin"],
+      ["Orla Brady", "F.R.I.D.A.Y."],
+      ["James D'Arcy", "J.A.R.V.I.S."],
+      ["Faran Tahir", "Raza"],
+      ["Emily Hampshire", "E.D.I.T.H."],
+      ["T'Nia Miller", "Jocasta"],
+      ["Ruaridh Mollica", "Tommy Maximoff / Speed"],
+      ["Henry Lewis", "D.U.M.-E"],
+      ["Jonathan Sayer", "U"],
+      ["Lauren Morais", "Lisa Molinari"],
+      ["Diane Morgan", "—"],
+      ["Mary McDonnell", "—"],
+    ]
+  },
+  "X-Men '97 Season 2": {
+    status: "Coming Soon",
+    statusClass: "cs",
+    release: "Summer 2026",
+    tagline: "The X-Men are scattered across time — Cyclops and Jean Grey stranded in 3960 A.D., while Professor X, Magneto, Rogue, Nightcrawler and Beast are in ancient Egypt 3000 B.C. They must find their way back to the 1990s while facing Apocalypse.",
+    director: "Jake Castorena (Supervising Director), Chase Conley, Emi Yonemura",
+    writer: "Beau DeMayo (scripts completed before firing), Matthew Chauncey (rewrites)",
+    producer: "Brad Winderbaum, Kevin Feige, Eric Lewald, Julia Lewald, Larry Houston, Matthew Chauncey",
+    studio: "Marvel Studios Animation",
+    cast: [
+      ["Ray Chase", "Scott Summers / Cyclops"],
+      ["Jennifer Hale", "Jean Grey"],
+      ["Cal Dodd", "Logan / Wolverine"],
+      ["Alison Sealy-Smith", "Ororo Munroe / Storm"],
+      ["A.J. LoCascio", "Remy LeBeau / Gambit"],
+      ["J.P. Karliak", "Morph"],
+      ["Lenore Zann", "Anna Marie / Rogue"],
+      ["George Buza", "Hank McCoy / Beast"],
+      ["Holly Chou", "Jubilation Lee / Jubilee"],
+      ["Isaac Robinson-Smith", "Bishop"],
+      ["Matthew Waterson", "Erik Lehnsherr / Magneto"],
+      ["Ross Marquand", "Professor Charles Xavier"],
+      ["Adrian Hough", "Kurt Wagner / Nightcrawler"],
+      ["Gui Agustini", "Roberto da Costa / Sunspot"],
+      ["Gil Birmingham", "Forge"],
+      ["Chris Potter", "Nathan Summers / Cable"],
+      ["Gates McFadden", "Rachel Summers / Mother Askani"],
+      ["Lawrence Bayne", "—"],
+    ]
+  },
+  "X-Men '97 Season 3": {
+    status: "In Production",
+    statusClass: "c",
+    release: "TBA",
+    tagline: "",
+    director: "Jake Castorena (Supervising Director), Chase Conley, Emi Yonemura",
+    writer: "Matthew Chauncey (Head Writer)",
+    producer: "Brad Winderbaum, Jake Castorena, Eric Lewald, Julia Lewald, Larry Houston",
+    studio: "Marvel Studios Animation",
+    cast: [
+      ["Ray Chase", "Scott Summers / Cyclops"],
+      ["Jennifer Hale", "Jean Grey"],
+      ["Cal Dodd", "Logan / Wolverine"],
+      ["Alison Sealy-Smith", "Ororo Munroe / Storm"],
+      ["A.J. LoCascio", "Remy LeBeau / Gambit"],
+      ["J.P. Karliak", "Morph"],
+      ["Lenore Zann", "Anna Marie / Rogue"],
+      ["George Buza", "Hank McCoy / Beast"],
+      ["Holly Chou", "Jubilation Lee / Jubilee"],
+      ["Isaac Robinson-Smith", "Bishop"],
+      ["Matthew Waterson", "Erik Lehnsherr / Magneto"],
+      ["Ross Marquand", "Professor Charles Xavier"],
+      ["Adrian Hough", "Kurt Wagner / Nightcrawler"],
+    ]
+  },
+  "Your Friendly Neighborhood Spider-Man S2": {
+    status: "Coming Soon",
+    statusClass: "cs",
+    release: "Fall 2026",
+    tagline: "Peter Parker continues his journey as Spider-Man featuring the introduction of Venom, Gwen Stacy, Spider-Gwen, Doc Ock and more.",
+    director: "Mel Zwyer (Supervising Director)",
+    writer: "Jeff Trammell (Showrunner & Head Writer)",
+    producer: "Kevin Feige, Brad Winderbaum, Jeff Trammell, Louis D'Esposito, Dana Vasquez-Eberhardt",
+    studio: "Marvel Studios Animation",
+    cast: [
+      ["Hudson Thames", "Peter Parker / Spider-Man"],
+      ["Colman Domingo", "Norman Osborn / Green Goblin"],
+      ["Charlie Cox", "Matt Murdock / Daredevil"],
+      ["Kari Wahlgren", "May Parker"],
+      ["Eugene Byrd", "Lonnie Lincoln / Tombstone"],
+      ["Grace Song", "Nico Minoru"],
+      ["Zeno Robinson", "Harry Osborn"],
+      ["Hugh Dancy", "Otto Octavius / Doctor Octopus"],
+      ["Roger Craig Smith", "Dmitri Smerdyakov / Chameleon"],
+      ["Jonathan Medina", "Mac Gargan / Scorpion"],
+      ["Aleks Le", "Amadeus Cho"],
+      ["Robert Atkin Downes", "Doctor Strange"],
+    ]
+  },
+  "Spider-Man: Miles Morales": {
+    status: "In Development",
+    statusClass: "r",
+    release: "TBA",
+    tagline: "A live-action Spider-Man film centered on Miles Morales, separate from the animated Beyond the Spider-Verse. Confirmed by producer Amy Pascal in 2023.",
+    director: "TBA",
+    writer: "TBA",
+    producer: "Amy Pascal, Kevin Feige",
+    studio: "Marvel Studios / Sony Pictures",
+    cast: []
+  },
+  "Spider-Man: Brand New Day": {
+    status: "Coming Soon",
+    statusClass: "cs",
+    release: "Jul 31, 2026",
+    tagline: "",
+    director: "Destin Daniel Cretton",
+    writer: "Chris McKenna, Erik Sommers",
+    producer: "Kevin Feige, Amy Pascal",
+    studio: "Marvel Studios / Sony Pictures",
+    cast: [
+      ["Tom Holland", "Peter Parker / Spider-Man"],
+      ["Zendaya", "MJ"],
+      ["Jon Bernthal", "Frank Castle / Punisher"],
+      ["Sadie Sink", "Jean Grey"],
+      ["Mark Ruffalo", "Bruce Banner / Hulk"],
+      ["Jacob Batalon", "Ned Leeds"],
+      ["Michael Mando", "Mac Gargan / Scorpion"],
+      ["Marvin Jones III", "Tombstone"],
+      ["Tramell Tillman", "William Metzger"],
+      ["Liza Colón-Zayas", "—"],
+    ]
+  },
+  "Spider-Man: Beyond the Spider-Verse": {
+    status: "In Production",
+    statusClass: "c",
+    release: "Jun 4, 2027",
+    tagline: "Picks up directly from the cliffhanger ending of Across the Spider-Verse, with Miles Morales trapped in Earth-42 facing his own variant — the Prowler.",
+    director: "Bob Persichetti, Justin K. Thompson",
+    writer: "Phil Lord, Christopher Miller, David Callaham",
+    producer: "Phil Lord, Christopher Miller, Amy Pascal, Avi Arad, Christina Steinberg, Jinko Gotoh, Aditya Sood",
+    studio: "Sony Pictures Animation",
+    cast: [
+      ["Shameik Moore", "Miles Morales / Spider-Man"],
+      ["Hailee Steinfeld", "Gwen Stacy / Spider-Gwen"],
+      ["Oscar Isaac", "Miguel O'Hara / Spider-Man 2099"],
+      ["Jake Johnson", "Peter B. Parker / Spider-Man"],
+      ["Daniel Kaluuya", "Hobie Brown / Spider-Punk"],
+      ["Issa Rae", "Jessica Drew / Spider-Woman"],
+      ["Jason Schwartzman", "Dr. Johnathon Ohnn / The Spot"],
+      ["Jharrel Jerome", "Miles G. Morales / Prowler"],
+      ["Brian Tyree Henry", "Jefferson Davis"],
+      ["Luna Lauren Vélez", "Rio Morales"],
+      ["Mahershala Ali", "Aaron Davis"],
+      ["Nicolas Cage", "Spider-Man Noir"],
+      ["John Mulaney", "Spider-Ham"],
+      ["Kimiko Glenn", "Peni Parker"],
+      ["Karan Soni", "Pavitr Prabhakar / Spider-Man India"],
+      ["Amandla Stenberg", "Margo Kess / Spider-Byte"],
+    ]
+  },
+  "Spider-Gwen": {
+    status: "In Development",
+    statusClass: "r",
+    release: "TBA",
+    tagline: "An animated Spider-Verse spinoff centered on Gwen Stacy. Confirmed in early development by Sony Pictures Animation in 2026.",
+    director: "TBA",
+    writer: "TBA",
+    producer: "TBA",
+    studio: "Sony Pictures Animation",
+    cast: [
+      ["Hailee Steinfeld", "Gwen Stacy / Spider-Gwen (expected)"],
+    ]
+  },
+  "Spider-Punk": {
+    status: "In Development",
+    statusClass: "r",
+    release: "TBA",
+    tagline: "An animated Spider-Verse spinoff centered on Hobie Brown. Daniel Kaluuya confirmed the first draft of the script was nearly complete in late 2025.",
+    director: "TBA",
+    writer: "Daniel Kaluuya, Ajon Singh",
+    producer: "TBA",
+    studio: "Sony Pictures Animation",
+    cast: [
+      ["Daniel Kaluuya", "Hobie Brown / Spider-Punk (expected)"],
+    ]
+  },
+};
+
+const badgeLabels = { r: "In Development", c: "In Production", cs: "Coming Soon", h: "On Hold" };
+
+function openModal(name) {
+  const p = projects[name];
+  if (!p) return;
+  document.getElementById('modal-title').textContent = name;
+  document.getElementById('modal-tagline').textContent = p.tagline || '';
+  document.getElementById('modal-badge-row').innerHTML =
+    `<span class="b ${p.statusClass}"><span class="dot"></span>${p.status}</span>`;
+
+  let html = '';
+  html += `<div class="modal-section"><div class="modal-section-title">Release Date</div><div class="modal-section-value">${p.release || 'TBA'}</div></div>`;
+  html += `<div class="modal-section"><div class="modal-section-title">Director</div><div class="modal-section-value">${p.director || 'TBA'}</div></div>`;
+  html += `<div class="modal-section"><div class="modal-section-title">Writer</div><div class="modal-section-value">${p.writer || 'TBA'}</div></div>`;
+  html += `<div class="modal-section"><div class="modal-section-title">Producer</div><div class="modal-section-value">${p.producer || 'TBA'}</div></div>`;
+  if (p.cast && p.cast.length > 0) {
+    const pills = p.cast.map(([actor, role]) =>
+      `<div class="cast-pill">${actor}${role && role !== '—' ? ` <span>as ${role}</span>` : ''}</div>`
+    ).join('');
+    html += `<div class="modal-section"><div class="modal-section-title">Cast</div><div class="modal-cast">${pills}</div></div>`;
+  } else {
+    html += `<div class="modal-section"><div class="modal-section-title">Cast</div><div class="modal-section-value">TBA</div></div>`;
+  }
+  document.getElementById('modal-body').innerHTML = html;
+  document.getElementById('modal-overlay').classList.add('open');
+}
+
+function closeModal() {
+  document.getElementById('modal-overlay').classList.remove('open');
+}
+
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+// Make project names clickable
+document.querySelectorAll('.name').forEach(el => {
+  const name = el.textContent.trim();
+  if (projects[name]) {
+    el.classList.add('clickable-name');
+    el.onclick = () => openModal(name);
+  }
+});
+</script>
 </body>
 </html>
